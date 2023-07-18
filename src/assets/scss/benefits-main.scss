@@ -1,0 +1,153 @@
+.benefits-main {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 200px;
+
+  .benefits-main__title {
+    font-size: 72em;
+    font-family: "Futura PT Light";
+    font-weight: 300;
+    margin: 0px auto;
+    padding-bottom: 50px;
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 40px;
+
+    .benefits__item._start {
+      opacity: 1;
+    }
+
+    .benefits__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 130px;
+      padding: 60px 0px;
+      border-top: 1px solid #343757;
+      opacity: 1;
+      // transition: opacity .3s ease 0s;
+
+      .benefits__number {
+        display: flex;
+        flex-direction: row;
+        font-family: "Futura PT Light";
+        font-size: 72em;
+        font-weight: 300;
+        color: #f0bc7a;
+        flex: 0.3;
+        opacity: 0;
+        transition: opacity 0.5s ease 0s;
+      }
+
+      .benefits__number._animNum {
+        opacity: 1;
+      }
+
+      .benefits__title {
+        font-size: 24em;
+        font-weight: normal;
+        font-family: "Futura PT Book";
+        flex: 1;
+        line-height: 130%;
+        opacity: 0;
+        transition: opacity 0.5s ease 0.3s;
+      }
+
+      .benefits__title._animTitle {
+        opacity: 1;
+      }
+
+      .benefits__paragraph_align {
+        font-size: 17em;
+        font-weight: 400;
+        font-family: "Futura PT Book";
+        color: #fff;
+        flex: 2;
+        line-height: 130%;
+        opacity: 0;
+        transition: opacity 0.5s ease 0.5s;
+      }
+
+      .benefits__paragraph_align._animParagraph {
+        opacity: 1;
+      }
+    }
+  }
+
+  .benefits:last-child {
+    border-bottom: 1px solid #343757;
+  }
+
+  .benefits-last-item-list-title {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-main .benefits-main__title {
+    text-align: center;
+  }
+
+  .benefits-main .benefits .benefits__item {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-row: 10% 70%;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+  }
+
+  .benefits .benefits__item .benefits__title {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .benefits .benefits__item .benefits__paragraph {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-main .benefits-main__title {
+    font-size: 56em;
+    text-align: start;
+  }
+
+  .benefits-main .benefits .benefits__item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-row: 10% 70%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .benefits .benefits__item .benefits__paragraph {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 320px) {
+  .benefits-main .benefits-main__title {
+    font-size: 48em;
+    text-align: start;
+  }
+
+  .benefits .benefits__item .benefits__paragraph {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 1 / 3;
+  }
+
+  .benefits-main .benefits .benefits__item {
+    grid-row-gap: 20px;
+  }
+}

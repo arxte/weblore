@@ -1,0 +1,81 @@
+.title-header {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Futura PT Light";
+  font-weight: 300;
+  font-size: 100em;
+  width: fit-content;
+  line-height: 130%;
+  margin-top: 110px;
+  opacity: 1;
+
+  .title-header_medium {
+    font-family: "Futura PT Medium";
+  }
+}
+
+.title-header__btn {
+  font-family: "Futura PT Medium";
+  font-weight: 400;
+  font-size: 20em;
+  color: #ef4d04;
+  padding: 14px 54px;
+  border: transparent;
+  background-color: #fff;
+  margin-top: 60px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color: #f0bc7a;
+    color: #1f2035;
+  }
+}
+
+// ANIMATION TITLE HEADER
+
+.title-appearance-enter-active,
+.title-appearance-leave-active {
+  transition: opacity 2s ease;
+}
+
+.title-appearance-enter-from,
+.title-appearance-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .title-header {
+    font-size: 70em;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-header {
+    font-size: 58em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-header {
+    font-size: 56em;
+    width: 80%;
+  }
+
+  .title-header__btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .title-header {
+    font-size: 36em;
+    width: 80%;
+  }
+
+  .title-header__btn {
+    margin-top: 20px;
+    width: 100%;
+    // padding: 24px 0px 24px 0px;
+  }
+}

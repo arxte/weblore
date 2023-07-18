@@ -1,0 +1,201 @@
+.background-discuss-block {
+  background-image: url("/src/assets/images/background-discuss-block.png");
+  max-width: 1920px;
+  min-height: 745px;
+}
+
+.discuss-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 745px;
+}
+
+.discuss {
+  color: white;
+  // font-family: "Futura PT";
+  display: flex;
+  flex-direction: row;
+  margin: auto 0px;
+
+  .discuss__title-block {
+    display: flex;
+    flex-direction: column;
+    font-size: 100em;
+    margin-right: 163px;
+    opacity: 0;
+    transition: opacity 2s ease 0s;
+    // animation: anim-discuss-title 2s ease 1 forwards;
+
+    .discuss__title {
+      // font-weight: 300;
+      font-family: "Futura PT Light";
+    }
+
+    .discuss__title-second {
+      // font-weight: 500;
+      font-family: "Futura PT Medium";
+    }
+  }
+
+  .discuss-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    // background: rgba(31, 32, 53, 0.4);
+    // backdrop-filter: blur(20px);
+    max-width: 340px;
+    // background-color: transparent;
+    backdrop-filter: none;
+    background-color: rgba(31, 32, 53, 0.4);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    transition: opacity 2s ease 0s;
+    // animation: anim-discuss-form 2s ease 1 forwards;
+
+    .discuss-form__title {
+      color: #f0bc7a;
+      // font-weight: 400;
+      font-family: "Futura PT Book";
+      font-size: 20em;
+      margin: 0px 0px 35px 0px;
+      // animation: anim-discuss-title-form 2s ease 1 forwards;
+      // text-shadow: #f0bc7a 0 0 5px;
+      // transition: text-shadow 2s ease 0s, color 2s ease 0s;
+    }
+
+    .discuss-form__input {
+      font-size: 20em;
+      // font-weight: 400;
+      font-family: "Futura PT Book";
+      padding: 10px 15px;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      margin: 0px 0px 30px 0px;
+
+      &::placeholder {
+        color: #5f6589;
+      }
+    }
+
+    .discuss-form__btn {
+      color: #ef4d04;
+      font-size: 20em;
+      // font-weight: 400;
+      font-family: "Futura PT Book";
+      padding: 10px 0px;
+      margin: 0px 0px 30px 0px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      border-color: transparent;
+      background-color: #fff;
+      // animation: anim-discuss-btn 2s ease 0s;
+
+      &:hover {
+        background-color: #f0bc7a;
+        color: #1f2035;
+        border-color: #f0bc7a;
+      }
+    }
+  }
+
+  .discuss-form__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .discuss-form__checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .discuss-form__checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #fff;
+    margin-right: 0.5em;
+    padding: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90% 90%;
+    transition: border-color 0.5s ease 0s, background-color 0.5s ease 0s,
+      background-image 0.5s ease 0s;
+  }
+
+  .discuss-form__checkbox:checked + label::before {
+    border-color: #fff;
+    background-color: #fff;
+    background-image: url("/src/assets/svg/discussCheckMark.svg");
+  }
+
+  .discuss-form__label {
+    font-size: 17em;
+    // font-weight: 400;
+    font-family: "Futura PT Book";
+    // animation: anim-discuss-label 2s ease 1 forwards;
+  }
+}
+
+.discuss-form._startAnimDiscuss {
+  opacity: 1;
+}
+
+.discuss__title-block._startAnimDiscuss {
+  opacity: 1;
+}
+
+._error {
+  color: rgb(255, 29, 29);
+}
+
+@media (max-width: 1000px) {
+  .discuss .discuss__title-block {
+    font-size: 70em;
+    margin-right: 50px;
+  }
+
+  .discuss .discuss-form {
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 768px) {
+  .discuss-wrapper {
+    flex-direction: column;
+  }
+  .discuss {
+    flex-direction: column;
+  }
+
+  .discuss-form {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discuss .discuss__title-block {
+    font-size: 56em;
+  }
+
+  .discuss .discuss-form {
+    max-width: 400px;
+    max-height: 308px;
+  }
+}
+
+@media (max-width: 320px) {
+  .discuss .discuss__title-block {
+    font-size: 48em;
+  }
+
+  .discuss .discuss-form {
+    max-width: 246px;
+    max-height: 323px;
+  }
+}

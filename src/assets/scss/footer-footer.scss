@@ -1,0 +1,205 @@
+footer {
+  background-color: #1f2035;
+}
+
+.foooter {
+  // font-size: 25em;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px 0px 80px 0px;
+}
+
+.footer-about {
+  flex: 2;
+
+  .footer-logo {
+    width: 84px;
+    height: 22px;
+    background: url("/src/assets/images/logo.png") no-repeat;
+  }
+
+  .footer-about__paragraph {
+    font-size: 17em;
+    font-family: "Futura PT Book";
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 130%;
+  }
+
+  .footer-about__paragraph-license {
+    font-size: 13em;
+    // font-weight: 400;
+    font-family: "Futura PT Book";
+    color: #5f6589;
+  }
+}
+
+.footer-nav {
+  flex: 1;
+
+  .footer-nav__item {
+    font-size: 17em;
+    // font-weight: 400;
+    font-family: "Futura PT Book";
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+.footer-tel {
+  flex: 1.5;
+
+  .footer-tel__title-tel {
+    font-size: 55em;
+    // font-weight: 300;
+    font-family: "Futura PT Light";
+    color: #f0bc7a;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 2s ease 0s;
+  }
+
+  .footer-tel-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-tel__list-days {
+    display: flex;
+    flex-direction: column;
+
+    .footer-tel__list-days-title {
+      color: #5f6589;
+      font-size: 17em;
+      font-family: "Futura PT Book";
+      margin-bottom: 10px;
+      align-self: flex-end;
+    }
+
+    .footer-tel__list-days-paragraph {
+      font-size: 17em;
+      font-family: "Futura PT Book";
+    }
+  }
+
+  .footer-tel__list-time {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .footer-tel__list-time-title {
+      color: #5f6589;
+      font-size: 17em;
+      font-family: "Futura PT Book";
+      margin-bottom: 10px;
+      align-self: flex-end;
+    }
+
+    .footer-tel__list-time-paragraph {
+      font-size: 17em;
+      font-family: "Futura PT Book";
+    }
+  }
+}
+
+.footer-tel__title-tel._startAnimFooter {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .footer-tel {
+    flex: 2.5;
+  }
+}
+
+@media (max-width: 1540px) {
+  .footer-tel .footer-tel__title-tel {
+    font-size: 44em;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-tel {
+    flex: 4;
+  }
+
+  .footer-about {
+    flex: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .foooter {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    row-gap: 80px;
+  }
+
+  .footer-tel {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .footer-tel .footer-tel__title-tel {
+    font-size: 40em;
+    text-align: end;
+  }
+
+  .footer-tel .footer-tel-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-tel .footer-tel-wrapper .footer-tel__list-days-paragraph {
+    align-self: flex-end;
+  }
+
+  .footer-tel .footer-tel-wrapper .footer-tel__list-time-paragraph {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 768px) {
+  .footer-tel {
+    flex: 4;
+  }
+
+  .footer-about {
+    flex: 1.5;
+  }
+}
+
+@media (max-width: 320px) {
+  .foooter {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    row-gap: 80px;
+  }
+
+  .footer-tel {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .footer-tel .footer-tel__title-tel {
+    font-size: 24em;
+    text-align: end;
+  }
+
+  .footer-tel .footer-tel-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-tel .footer-tel-wrapper .footer-tel__list-days-paragraph {
+    align-self: flex-end;
+  }
+
+  .footer-tel .footer-tel-wrapper .footer-tel__list-time-paragraph {
+    align-self: flex-end;
+  }
+}

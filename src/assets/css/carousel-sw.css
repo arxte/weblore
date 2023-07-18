@@ -1,0 +1,495 @@
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin: 0px 0px 150px;
+}
+.carousel-wrapper .carousel-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 465px;
+}
+.carousel-wrapper .carousel-button-wrapper .carousel__button {
+  background-color: transparent;
+  border: 1.5px solid #5f6589;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.carousel-wrapper .carousel-button-wrapper .carousel__button-prev {
+  background: url("/src/assets/svg/carouselPrevArrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 40px;
+  border-right: none;
+}
+.carousel-wrapper .carousel-button-wrapper .carousel__button-prev:hover {
+  background-color: #343757;
+  border-color: #f0bc7a;
+}
+.carousel-wrapper .carousel-button-wrapper .carousel__button-next {
+  background: url("/src/assets/svg/carouselNextArrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 40px;
+  border-left: none;
+}
+.carousel-wrapper .carousel-button-wrapper .carousel__button-next:hover {
+  background-color: #343757;
+  border-color: #f0bc7a;
+}
+
+.carousel {
+  width: 100000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 40px;
+  position: relative;
+  -webkit-transition: left 0.5s ease 0s;
+  transition: left 0.5s ease 0s;
+}
+.carousel .carousel__item {
+  -webkit-transition: max-width 0.5s ease-in 0s, max-height 0.5s ease-in 0s;
+  transition: max-width 0.5s ease-in 0s, max-height 0.5s ease-in 0s;
+  background-repeat: no-repeat;
+  padding-right: 19px;
+}
+.carousel .active {
+  max-width: 640px;
+  height: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1px;
+}
+.carousel .active .carousel-item-content_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(31, 32, 53, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 30px;
+  -webkit-transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, backdrop-filter 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__text-wrapper_active {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__title_active {
+  font-family: "Futura PT Book";
+  font-size: 24em;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__paragraph_active {
+  font-family: "Futura PT Book";
+  font-size: 17em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 130%;
+  -webkit-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__btn-wrapper_active {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__btn_active {
+  font-family: "Futura PT Book";
+  font-size: 20em;
+  font-weight: normal;
+  color: #f0bc7a;
+  background-color: transparent;
+  border: 1px solid #f0bc7a;
+  padding: 16px 50px;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.carousel .active .carousel-item-content_active .carousel-item-content__btn_active:hover {
+  background-color: #f0bc7a;
+  color: #1f2035;
+}
+.carousel .inactive {
+  max-width: 310px;
+  max-height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: max-width 1s ease 0s, max-height 1s ease 0s;
+  transition: max-width 1s ease 0s, max-height 1s ease 0s;
+}
+.carousel .inactive .carousel-item-content_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(31, 32, 53, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 20px 40px 0px 20px;
+  -webkit-transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, backdrop-filter 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, backdrop-filter 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__text-wrapper_active {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__title_active {
+  font-family: "Futura PT Book";
+  font-size: 24em;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__paragraph_active {
+  font-family: "Futura PT Book";
+  font-size: 17em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 130%;
+  -webkit-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__btn-wrapper_active {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__btn_active {
+  font-family: "Futura PT Book";
+  font-size: 20em;
+  font-weight: normal;
+  color: #f0bc7a;
+  background-color: transparent;
+  border: 1px solid #f0bc7a;
+  padding: 16px 50px;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.carousel .inactive .carousel-item-content_active .carousel-item-content__btn_active:hover {
+  background-color: #f0bc7a;
+  color: #1f2035;
+}
+.carousel .links {
+  text-decoration: none;
+}
+.carousel .carousel-img-wrapper_active {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+.carousel .carousel-img-wrapper_active .carousel__img_active {
+  width: 580px;
+  height: 397px;
+  margin: 50px auto 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.carousel .carousel-img-wrapper_inactive {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+.carousel .carousel-img-wrapper_inactive .carousel-img_inactive {
+  width: 243px;
+  height: 170px;
+  margin: 120px auto 0px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-item-content_active {
+  background-color: rgba(31, 32, 53, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.carousel-item-content_active .carousel-item-content__title_active {
+  font-family: "Futura PT Book";
+  font-size: 24em;
+  font-weight: normal;
+  color: #fff;
+  padding: 20px;
+}
+
+@media (max-width: 1000px) {
+  .carousel-wrapper .active {
+    max-width: 470px !important;
+  }
+  .carousel__img_active {
+    max-width: 410px !important;
+  }
+  .carousel-wrapper .carousel-button-wrapper {
+    right: 270px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-wrapper .active {
+    max-width: 354px !important;
+    max-height: 517px !important;
+  }
+  .carousel-img_active {
+    max-width: 243px !important;
+    max-height: 170px !important;
+    margin: 120px auto 0px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .carousel__img_active {
+    max-width: 314px !important;
+    max-height: 220px !important;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .carousel-wrapper .carousel-button-wrapper {
+    right: 195px;
+  }
+  .carousel .carousel__item .carousel-item-content_active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .carousel .carousel__item .carousel-item-content_active .carousel-item-content__btn-wrapper_active {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 30px;
+  }
+  .carousel .carousel__item .carousel-item-content_active .carousel-item-content__btn_active {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .carousel-wrapper .carousel .inactive {
+    max-width: 292px !important;
+    max-height: 382px !important;
+  }
+}
+@media (max-width: 480px) {
+  .carousel {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carousel .carousel__item {
+    display: none;
+  }
+  .carousel .carousel__item:nth-child(-n+3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 448px !important;
+    max-height: 517px !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+  .carousel .carousel-img-wrapper_active .carousel__img_active {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .activeImgSize480 {
+    width: 259px !important;
+    height: 70px !important;
+    margin: 0px auto;
+  }
+  .trtr480 {
+    margin-top: 50px;
+  }
+  .carousel .carousel__item .carousel-item-content_active .carousel-item-content__btn_active {
+    text-align: center;
+  }
+}
+@media (max-width: 1440px) {
+  .carousel-wrapper .carousel-button-wrapper {
+    right: 150px;
+  }
+}
+@media (max-width: 1600px) {
+  .carousel-wrapper .carousel-button-wrapper {
+    right: 210px;
+  }
+}
+@media (max-width: 320px) {
+  .carousel .carousel__item:nth-child(-n+3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 30px;
+    padding-right: 0px;
+  }
+  .carousel .carousel-img-wrapper_active {
+    margin-top: 40%;
+  }
+  .trtr {
+    margin-top: 60%;
+  }
+  .carousel .carousel-img-wrapper_active .carousel__img_active {
+    width: 80% !important;
+    height: 160px !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .activeImgSize {
+    width: 157px !important;
+    height: 42px !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+  }
+  .carousel .carousel__item:nth-child(-n+3) .carousel-item-content_active .carousel-item-content__title_active {
+    font-size: 20em;
+  }
+  .carousel .carousel__item:nth-child(-n+3) .carousel-item-content_active .carousel-item-content__paragraph_active {
+    font-size: 15em;
+  }
+  .carousel .carousel__item:nth-child(-n+3) .carousel-item-content_active .carousel-item-content__btn_active {
+    padding: 16px 30px;
+  }
+  .carousel .carousel__item .carousel-item-content_active .carousel-item-content__btn_active {
+    text-align: center;
+  }
+}

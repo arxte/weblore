@@ -1,0 +1,59 @@
+main {
+  background-color: #1f2035;
+}
+
+.portfolio {
+  width: 100%;
+  padding: 150px 0px 0px;
+}
+
+.portfolio-title-wrapper {
+  font-family: "Futura PT Light";
+  width: fit-content;
+  margin: 0px auto 0px auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .portfolio__title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 72em;
+    margin-right: 317px;
+    flex: 1;
+    margin: 0px auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .portfolio-title-wrapper {
+    align-items: center;
+
+    .portfolio__title {
+      margin: 0px auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-title-wrapper {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title-wrapper {
+    margin: 0px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .portfolio-title-wrapper .portfolio__title {
+    font-size: 48em;
+  }
+
+  .portfolio-title-wrapper {
+    align-items: flex-start;
+  }
+}
